@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string-array name="operation_array">
+        <item>Addition</item>
+        <item>Subtraction</item>
+        <item>Multiplication</item>
+        <item>Division</item>
+        <item>Exponent</item>
+        <item>Nth Root</item>
+        <item>Modulus</item>
+    </string-array>
+</resources>
