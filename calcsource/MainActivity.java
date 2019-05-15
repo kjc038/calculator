@@ -1,5 +1,6 @@
 package edu.ucsd.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -19,6 +21,18 @@ public class MainActivity extends AppCompatActivity {
         //Loads activity_main.xml
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Launches second activity within the main activity
+        ImageButton helpActivityBtn = findViewById(R.id.helpBtn);
+        helpActivityBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                //Create an intent with button that goes to 2nd screen
+                Intent startIntent = new Intent(getApplicationContext(), Help.class);
+                startActivity(startIntent);
+            }
+        });
 
         //Create spinner with id
         Spinner staticSpinner = findViewById(R.id.spinner);
